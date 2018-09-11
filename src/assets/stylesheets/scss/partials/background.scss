@@ -1,0 +1,43 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-attachment: fixed;
+  background-position: middle center;
+  overflow-y: hidden;
+  z-index: 0
+}
+
+.background-appear {
+  opacity: 0.01;
+}
+
+.background-appear.background-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.background-enter {
+  opacity: 0.01;
+}
+
+.background-enter.background-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.background-leave {
+  opacity: 1;
+}
+
+.background-leave.background-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
