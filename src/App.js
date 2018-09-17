@@ -40,7 +40,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div
+        className={
+          this.state.imageLoaded
+            ? "background-loaded background-fade-in"
+            : "background-loaded"
+        }
+      >
         <Background
           handleImageLoader={this.handleImageLoader}
           randomNumber={this.state.randomNumber}
@@ -49,7 +55,7 @@ class App extends React.Component {
         <Content>
           <Quotes quote={this.state.quote} />
         </Content>
-      </React.Fragment>
+      </div>
     );
   }
 }
