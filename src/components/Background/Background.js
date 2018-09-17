@@ -1,23 +1,24 @@
 import React from "react";
-import { CSSTransitionGroup } from "react-transition-group";
+// import { CSSTransitionGroup } from "react-transition-group";
 
-const Background = image => {
+const Background = ({ imageLoaded, handleImageLoader, randomNumber }) => {
   return (
-    <React.Fragment>
-      <CSSTransitionGroup
-        transitionName="background"
-        transitionAppear={true}
-        transitionAppearTimeout={900}
-        transitionEnter={false}
-        transitionLeave={false}
-      >
-        <img
-          alt="Lorem picsum"
-          src="https://picsum.photos/1928/?random"
-          className="background"
-        />
-      </CSSTransitionGroup>
-    </React.Fragment>
+    <div className="background-container">
+      <img
+        className={imageLoaded ? "is-hidden" : "background-preload"}
+        src={`http://picsum.photos/8/?image=${randomNumber}`}
+        width="100%"
+      />
+      <img
+        className={
+          imageLoaded
+            ? "background-loaded background-fade-in"
+            : "background-loaded"
+        }
+        src={`http://picsum.photos/1928/?image=${randomNumber}`}
+        onLoad={handleImageLoader}
+      />
+    </div>
   );
 };
 

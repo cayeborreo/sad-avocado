@@ -1,43 +1,43 @@
-.background {
-  position: fixed;
+.background-container {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  float: left;
+}
+
+.background-preload {
+  position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
-  background-attachment: fixed;
-  background-position: middle center;
-  overflow-y: hidden;
-  z-index: 0
+
+  width: 100%;
+  height: 100%;
 }
 
-.background-appear {
-  opacity: 0.01;
+.background-loaded {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-size: cover;
+
+  opacity: 0;
+
+  transition: opacity 1s ease;
 }
 
-.background-appear.background-appear-active {
+.background-fade-in {
   opacity: 1;
-  transition: opacity .5s ease-in;
-}
-
-.background-enter {
-  opacity: 0.01;
-}
-
-.background-enter.background-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.background-leave {
-  opacity: 1;
-}
-
-.background-leave.background-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  /* remove scrollbar space */
-  background: transparent;
-  /* optional: just make scrollbar invisible */
+  width: 0;
+  // background-color: transparent
 }
