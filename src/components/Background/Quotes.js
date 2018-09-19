@@ -3,8 +3,8 @@ import React from "react";
 const Quotes = ({ quote }) => {
   return (
     <div className="card">
-      {quote}
-      <br />- Ron Swanson
+      <div className="is-smallcaps">Today's Swanson quote</div>
+      <div className="h1">{quote}</div>
     </div>
   );
 };

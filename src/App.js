@@ -40,13 +40,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        className={
-          this.state.imageLoaded
-            ? "background-loaded background-fade-in"
-            : "background-loaded"
-        }
-      >
+      <div className="background-loaded background-fade-in">
         <Background
           handleImageLoader={this.handleImageLoader}
           randomNumber={this.state.randomNumber}

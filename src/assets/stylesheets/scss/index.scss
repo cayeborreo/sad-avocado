@@ -1,7 +1,15 @@
-@import "./modules/_variables.scss";
+@charset "utf-8";
+
+// Import initial variables
 @import "../../../../node_modules/bulma/sass/utilities/initial-variables";
 @import "../../../../node_modules/bulma/sass/utilities/functions";
-@import "../../../../node_modules/bulma/css/bulma.css";
-@import "../../../../node_modules/bulma/bulma.sass";
+@import "../../../../node_modules/bulma/sass/utilities/derived-variables.sass";
+
+// Import custom variables and styles
+@import "./modules/_variables.scss";
 @import "./partials/background.scss";
 @import "./partials/content.scss";
+@import "./partials/typography.scss";
+
+// Import Bulma
+@import "../../../../node_modules/bulma/bulma";
