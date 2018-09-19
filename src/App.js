@@ -40,16 +40,24 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="background-loaded background-fade-in">
+      <React.Fragment>
         <Background
           handleImageLoader={this.handleImageLoader}
           randomNumber={this.state.randomNumber}
           imageLoaded={this.state.imageLoaded}
         />
-        <Content>
-          <Quotes quote={this.state.quote} />
-        </Content>
-      </div>
+        <div
+          className={
+            this.state.imageLoaded
+              ? "background-loaded background-fade-in"
+              : "background-loaded"
+          }
+        >
+          <Content>
+            <Quotes quote={this.state.quote} />
+          </Content>
+        </div>
+      </React.Fragment>
     );
   }
 }

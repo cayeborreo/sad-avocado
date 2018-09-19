@@ -3,7 +3,7 @@ import React from "react";
 
 const Background = ({ imageLoaded, handleImageLoader, randomNumber }) => {
   return (
-    <div className="background-container">
+    <div className="background-container background-loaded background-fade-in">
       <img
         className={imageLoaded ? "is-hidden" : "background-preload"}
         src={`http://picsum.photos/8/?image=${randomNumber}`}
