@@ -8,6 +8,7 @@ const Background = ({ imageLoaded, handleImageLoader, randomNumber }) => {
         className={imageLoaded ? "is-hidden" : "background-preload"}
         src={`http://picsum.photos/8/?image=${randomNumber}`}
         width="100%"
+        alt="Placeholder image"
       />
       <img
         className={
@@ -17,6 +18,7 @@ const Background = ({ imageLoaded, handleImageLoader, randomNumber }) => {
         }
         src={`http://picsum.photos/1928/?image=${randomNumber}`}
         onLoad={handleImageLoader}
+        alt="Daily Swanson"
       />
     </div>
   );
