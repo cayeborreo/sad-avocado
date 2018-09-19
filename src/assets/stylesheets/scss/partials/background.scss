@@ -1,3 +1,10 @@
+@import "./../modules/variables";
+
+body {
+  cursor: default;
+  color: $white;
+}
+
 .background-container {
   position: relative;
 
@@ -6,6 +13,7 @@
 
   overflow: hidden;
   float: left;
+  cursor: default;
 }
 
 .background-preload {

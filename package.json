@@ -19,7 +19,7 @@
     "build-css": "node-sass-chokidar src/assets/stylesheets/scss -o src/assets/stylesheets/css",
     "watch-css": "yarn run build-css && node-sass-chokidar src/assets/stylesheets/scss -o src/assets/stylesheets/css --watch --recursive",
     "dev": "concurrently \"yarn watch-css\" \"react-scripts start\"",
-    "start": "react-scripts start"
+    "start": "concurrently \"yarn watch-css\" \"react-scripts start\""
   },
   "devDependencies": {
     "bulma": "^0.7.1"

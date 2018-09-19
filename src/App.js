@@ -4,6 +4,7 @@ import axios from "axios";
 import Background from "./components/Background/Background";
 import Content from "./components/UIKit/Content";
 import Quotes from "./components/Background/Quotes";
+import Clock from "./components/Clock/Clock";
 
 class App extends React.Component {
   constructor(props) {
@@ -47,14 +48,20 @@ class App extends React.Component {
           imageLoaded={this.state.imageLoaded}
         />
         <div
-          className={
-            this.state.imageLoaded
-              ? "background-loaded background-fade-in"
-              : "background-loaded"
-          }
+          // className={
+          //   this.state.imageLoaded
+          //     ? "background-loaded background-fade-in"
+          //     : "background-loaded"
+          // }
+          className="background-loaded background-fade-in"
         >
           <Content>
-            <Quotes quote={this.state.quote} />
+            <Clock />
+            {this.state.quote.length !== 0 ? (
+              <Quotes quote={this.state.quote} />
+            ) : (
+              ""
+            )}
           </Content>
         </div>
       </React.Fragment>

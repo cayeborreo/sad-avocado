@@ -2,7 +2,7 @@
 
 .h1 {
   font-family: $family-serif;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-style: italic;
   line-height: 1.1;
 }
@@ -13,4 +13,11 @@
   text-transform: uppercase;
   letter-spacing: .1rem;
   margin: .25rem 0;
+}
+
+.clock {
+  font-family: $font-primary;
+  font-size: 14rem;
+  color: $white;
+  line-height: .95;
 }
