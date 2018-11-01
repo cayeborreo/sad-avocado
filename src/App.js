@@ -40,16 +40,17 @@ class App extends React.Component {
   };
 
   render() {
+    const { randomNumber, imageLoaded, quote } = this.state;
     return (
       <React.Fragment>
         <Background
           handleImageLoader={this.handleImageLoader}
-          randomNumber={this.state.randomNumber}
-          imageLoaded={this.state.imageLoaded}
+          randomNumber={randomNumber}
+          imageLoaded={imageLoaded}
         />
         <div
           // className={
-          //   this.state.imageLoaded
+          //   imageLoaded
           //     ? "background-loaded background-fade-in"
           //     : "background-loaded"
           // }
@@ -57,11 +58,7 @@ class App extends React.Component {
         >
           <Content>
             <Clock />
-            {this.state.quote.length !== 0 ? (
-              <Quotes quote={this.state.quote} />
-            ) : (
-              ""
-            )}
+            {quote.length !== 0 ? <Quotes quote={quote} /> : ""}
           </Content>
         </div>
       </React.Fragment>
