@@ -48,14 +48,7 @@ class App extends React.Component {
           randomNumber={randomNumber}
           imageLoaded={imageLoaded}
         />
-        <div
-          // className={
-          //   imageLoaded
-          //     ? "background-loaded background-fade-in"
-          //     : "background-loaded"
-          // }
-          className="background-loaded background-fade-in"
-        >
+        <div className="background-loaded background-fade-in">
           <Content>
             <Clock />
             {quote.length !== 0 ? <Quotes quote={quote} /> : ""}
