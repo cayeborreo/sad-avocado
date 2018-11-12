@@ -1,5 +1,11 @@
 import React from "react";
-// import { CSSTransitionGroup } from "react-transition-group";
+import PropTypes from "prop-types";
+
+const propTypes = {
+  imageLoaded: PropTypes.bool.isRequired,
+  handleImageLoader: PropTypes.func.isRequired,
+  randomNumber: PropTypes.number.isRequired
+};
 
 const Background = ({ imageLoaded, handleImageLoader, randomNumber }) => {
   return (
@@ -26,5 +32,7 @@ const Background = ({ imageLoaded, handleImageLoader, randomNumber }) => {
     </React.Fragment>
   );
 };
+
+Background.propTypes = propTypes;
 
 export default Background;
